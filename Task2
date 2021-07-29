@@ -1,0 +1,32 @@
+package Nameappp.openApium;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.android.AndroidDriver;
+
+public class NewTest {
+  @Test
+  public void f() throws MalformedURLException {
+	  
+	  
+	  DesiredCapabilities cap = new DesiredCapabilities();
+
+	  cap.setCapability("deviceName", "YD201");
+	  cap.setCapability("udid", "7bcdb234");
+	  cap.setCapability("platformName", "Android");
+	  cap.setCapability("noReset", "true");
+	  cap.setCapability("app", "C:\\Users\\AFathy3\\eclipse-workspace\\openApium\\APK\\ToDoList.apk");
+	  
+	  
+
+	//AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+	AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+	  
+	  
+	  
+  }
+}
