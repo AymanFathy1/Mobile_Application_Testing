@@ -1,0 +1,48 @@
+package testpages;
+
+import org.testng.annotations.Test;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+import org.testng.annotations.BeforeTest;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterTest;
+
+public class TestpagenewG {
+  @Test
+  public void f() {
+  }
+  @BeforeTest
+  public void beforeTest() throws IOException {
+	  
+	  
+
+	  DesiredCapabilities cap = new DesiredCapabilities();
+	  cap.setCapability("deviceName", "YD201");
+	  cap.setCapability("udid", "7bcdb234");
+	  cap.setCapability("platformName", "Android");
+	  cap.setCapability("platformVersion", "5.0");
+	  cap.setCapability("noReset", "true"); // it's false by default
+	  cap.setCapability("appPackage", "com.indeed.android.jobsearch");
+	  cap.setCapability("appActivity", "com.indeed.android.jobsearch.LaunchActivity");
+	  
+	  AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
+	  
+	  
+  }
+
+  
+  
+  
+  
+  @AfterTest
+  public void afterTest() {
+  }
+
+}
